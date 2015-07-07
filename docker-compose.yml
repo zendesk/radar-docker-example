@@ -1,0 +1,23 @@
+server:
+  build: server
+  ports:
+   - "8000:8000"
+  
+  volumes:
+   - server:/app
+  
+  links:
+   - redis
+
+  environment:
+    RADAR_REDIS_URL: redis://redis:6379
+
+redis:
+  image: redis
+
+client:
+  build: client
+  ports:
+   - "80:8000"
+  volumes:
+   - client:/app

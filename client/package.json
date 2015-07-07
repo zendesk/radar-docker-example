@@ -1,0 +1,15 @@
+{
+  "name": "radar-example-client",
+  "version": "0.0.1",
+  "description": "Just a couple of radar examples running inside docker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "radar_client": "*",
+    "node-static": "*"
+  }
+}

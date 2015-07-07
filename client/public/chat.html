@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="/js/engine.io.js"></script>
+    <script src="/js/minilog.js"></script>
+    <script src="/js/radar_client.js"></script>
+    <script>
+      var userId = Math.floor((Math.random() * 10) + 1);
+
+      Minilog.enable();
+      RadarClient.configure({
+        host: window.location.hostname,
+        port: 8000,
+        userId: userId,
+        accountType: 'funccaunt',
+        accountName: 'dev'
+      });
+
+      function goChat() {
+        setTimeout(chat, Math.floor(Math.random() * 5000));
+      }
+
+      function chat() {
+        RadarClient.message('chat/1').publish('(' + userId + ') -> ' + Math.random());
+        goChat();
+      }
+
+      RadarClient.alloc('fundar', function() {
+        console.log('FunRadar is ready'); 
+
+        RadarClient.message('chat/1').on(function(message) {
+          console.log('Chat:', message.value);
+        }).sync();
+
+        goChat();
+      });
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

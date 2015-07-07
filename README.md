@@ -5,6 +5,8 @@
 So you want to run quickly a radar server inside docker, and you don't want to think 
 about connecting containers, or launching new virtual machines. You just want it to work. 
 
+This example runs radar client and server side. Client on port 80 and server in port 8000. As of now there aren't that many examples to play with, but I promise I'll get some. 
+
 ## The preparing
 
 * Install docker, docker-machine and docker-compose.
@@ -46,6 +48,9 @@ You can check the status of the containers (server and redis) by executing:
 
 ## The enjoying
 
+
+### The Server Side of the story
+
 Open a browser window and check if your radar container is running. 
 
     open http://"$(docker-machine ip radar)":8000/ping
@@ -53,3 +58,12 @@ Open a browser window and check if your radar container is running.
 You should see something like:
   
     {"pong":"Radar running at 5a97e3cd4e06"}
+
+
+### The Client Side of the story
+
+Open a browser window and check if radar client works and can connect to the server.
+
+    open http://"$(docker-machine ip radar)"
+
+Remember to open the JS console on your browser. There's no html UI. 

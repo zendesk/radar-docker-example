@@ -1,10 +1,10 @@
 FROM node:0.10.38
 
-RUN mkdir /app
-ADD . /app
-RUN rm -r /app/node_modules; true
-WORKDIR /app
+ADD package.json /
 RUN npm install
+RUN mkdir /src
+ADD . /src
+WORKDIR /src
 
 CMD ["node", "index" ]
 

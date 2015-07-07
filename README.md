@@ -19,7 +19,9 @@ As of now, you can install the requirements by doing this, if you are on a mac:
 
 ## The doing
 
-### Create on VM to run radar
+### Create one VM to run radar
+
+Let's keep everything separated
 
     docker-machine create --driver virtualbox radar-example
 
@@ -36,7 +38,7 @@ It should be empty, since it's brand new.
 
 ### Building Radar
 
-Now, let's build our radar container. THis step will take care of building client and server containers. 
+Now, let's build our radar container. This step will take care of building client and server containers. 
 
     docker-compose build
 

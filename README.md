@@ -13,6 +13,10 @@ This example runs radar client and server side. Client on port 80 and server in 
 * https://docs.docker.com/machine/
 * https://docs.docker.com/compose/
 
+As of now, you can install the requirements by doing this, if you are on a mac:
+
+    brew install docker docker-composer docker-machine
+
 ## The doing
 
 ### Create on VM to run radar
@@ -32,7 +36,7 @@ It should be empty, since it's brand new.
 
 ### Building Radar
 
-Now, let's build our radar container.
+Now, let's build our radar container. THis step will take care of building client and server containers. 
 
     docker-compose build
 

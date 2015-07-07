@@ -71,3 +71,8 @@ Open a browser window and check if radar client works and can connect to the ser
     open http://"$(docker-machine ip radar)"
 
 Remember to open the JS console on your browser. There's no html UI. 
+
+
+## Copyright and License
+
+Copyright 2015, Zendesk Inc. Licensed under the Apache License Version 2.0, http://www.apache.org/licenses/LICENSE-2.0

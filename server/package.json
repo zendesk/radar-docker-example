@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "radar": "^0.15.7"
+    "radar": "^0.40.3"
   }
 }
